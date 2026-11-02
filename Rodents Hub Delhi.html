@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rodents Hub Delhi – Hamster & Small Pet Supplies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;800&family=Noto+Sans+Devanagari:wght@400;600&display=swap">
+<style>
+:root{--bg:#fbf5ea;--card:#fffdf8;--soft:#f3e7d2;--ink:#3b2a20;--muted:#7a6554;--brown:#a8744a;--line:#ead9bd;--wa:#0f8f4f;--shadow:0 10px 30px rgba(120,80,40,.12);color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241a14;--card:#30231b;--soft:#3a2b21;--ink:#f7ecdc;--muted:#c9b49c;--brown:#e0a972;--line:#4a392c;--wa:#1fa361;--shadow:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#241a14;--card:#30231b;--soft:#3a2b21;--ink:#f7ecdc;--muted:#c9b49c;--brown:#e0a972;--line:#4a392c;--wa:#1fa361;--shadow:0 10px 30px rgba(0,0,0,.35);color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito","Noto Sans Devanagari",system-ui,sans-serif;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3{font-family:"Fredoka","Noto Sans Devanagari",system-ui,sans-serif;margin:0;font-weight:600}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{display:flex;align-items:center;gap:8px;font-family:"Fredoka",sans-serif;font-weight:600;font-size:18px;color:var(--ink);text-decoration:none}
+.logo svg{width:34px;height:34px}
+.nav a.pill{font-size:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:12px 20px;font:800 15px "Nunito",sans-serif;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:var(--wa);color:#fff;box-shadow:0 6px 16px rgba(15,143,79,.3)}
+.btn.ghost{background:var(--soft);color:var(--ink)}
+.pill{padding:8px 16px}
+.hero{display:grid;gap:24px;padding:36px 0 28px;align-items:center}
+.badge{display:inline-block;background:var(--soft);color:var(--brown);border-radius:999px;padding:6px 14px;font-weight:800;font-size:13px}
+.hero h1{font-size:clamp(34px,9vw,58px);line-height:1.08;margin:12px 0}
+.hero p{color:var(--muted);font-size:17px;max-width:480px;margin:0 0 20px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.art{position:relative;background:radial-gradient(circle at 50% 40%,var(--soft),transparent 70%);border-radius:32px;padding:20px;display:grid;place-items:center}
+.art svg.big{width:min(300px,70vw);animation:float 4s ease-in-out infinite}
+.art .dot{position:absolute;font-size:26px;animation:float 5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+.sec{padding:30px 0}
+.sec h2{font-size:clamp(26px,6vw,36px)}
+.sec .sub{color:var(--muted);margin:4px 0 22px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .25s}
+.card:hover{transform:translateY(-4px)}
+.pic{background:linear-gradient(160deg,var(--soft),var(--card));border-radius:18px;height:150px;display:grid;place-items:center;margin-bottom:12px}
+.pic svg{width:110px;height:110px}
+.pic.sm svg{width:88px;height:88px}
+.card h3{font-size:18px;line-height:1.25}
+.card .note{color:var(--muted);font-size:14px;margin:4px 0 12px;flex:1}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.price{font-family:"Fredoka",sans-serif;font-size:24px;color:var(--brown);font-weight:600}
+.card .btn{width:100%;margin-top:12px}
+.tag{font-size:12px;font-weight:800;background:var(--brown);color:#fff;border-radius:999px;padding:3px 10px;align-self:flex-start;margin-bottom:8px}
+.delivery{background:var(--soft);border-radius:28px;padding:24px;display:grid;gap:10px}
+.delivery h2{font-size:24px}
+footer{text-align:center;color:var(--muted);padding:28px 18px 96px;font-size:14px}
+footer b{color:var(--ink)}
+.float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:8;box-shadow:0 8px 24px rgba(15,143,79,.4)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.reveal.in{opacity:1;transform:none}
+@media (min-width:800px){.hero{grid-template-columns:1.1fr .9fr;padding:56px 0 40px}.delivery{grid-template-columns:1fr auto;align-items:center}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="ham" viewBox="0 0 100 100"><circle cx="24" cy="26" r="12" fill="#e3b98a"/><circle cx="76" cy="26" r="12" fill="#e3b98a"/><circle cx="24" cy="26" r="6" fill="#f6d5d0"/><circle cx="76" cy="26" r="6" fill="#f6d5d0"/><ellipse cx="50" cy="56" rx="38" ry="34" fill="#f0c896"/><ellipse cx="50" cy="70" rx="24" ry="17" fill="#fff6e8"/><circle cx="22" cy="64" r="6" fill="#f7b7b0" opacity=".65"/><circle cx="78" cy="64" r="6" fill="#f7b7b0" opacity=".65"/><circle cx="36" cy="50" r="4.5" fill="#3b2a20"/><circle cx="64" cy="50" r="4.5" fill="#3b2a20"/><circle cx="37.6" cy="48.4" r="1.5" fill="#fff"/><circle cx="65.6" cy="48.4" r="1.5" fill="#fff"/><ellipse cx="50" cy="60" rx="4" ry="3" fill="#d98a86"/><path d="M50 63v3M50 66q-4 4-8 1M50 66q4 4 8 1" stroke="#3b2a20" fill="none" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="bottle" viewBox="0 0 100 100"><rect x="34" y="14" width="32" height="70" rx="10" fill="#cfe8f1" stroke="#8fbccc" stroke-width="3"/><rect x="36" y="46" width="28" height="36" rx="8" fill="#8fd0e8"/><rect x="40" y="5" width="20" height="12" rx="4" fill="#b78b62"/><path d="M50 84v8" stroke="#8a8a8a" stroke-width="4" stroke-linecap="round"/><circle cx="50" cy="94" r="3" fill="#8a8a8a"/></symbol>
+<symbol id="bed" viewBox="0 0 100 100"><path d="M24 30h52l6 56H18z" fill="#e8cfa4" stroke="#c9a56f" stroke-width="3" stroke-linejoin="round"/><path d="M24 30q26-14 52 0" fill="#f3e2bf" stroke="#c9a56f" stroke-width="3"/><path d="M32 52q9 6 18 0t18 0M30 68q10 6 20 0t20 0" stroke="#c9a56f" stroke-width="3" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="seed" viewBox="0 0 100 100"><rect x="22" y="12" width="56" height="76" rx="8" fill="#f6e3c0" stroke="#c9a56f" stroke-width="3"/><path d="M22 28h56" stroke="#c9a56f" stroke-width="3" stroke-dasharray="4 4"/><ellipse cx="40" cy="55" rx="6" ry="9" fill="#8b6240" transform="rotate(-25 40 55)"/><ellipse cx="60" cy="52" rx="6" ry="9" fill="#a57a4e" transform="rotate(20 60 52)"/><ellipse cx="50" cy="74" rx="6" ry="8" fill="#d6a95e" transform="rotate(8 50 74)"/></symbol>
+<symbol id="pell" viewBox="0 0 100 100"><rect x="22" y="12" width="56" height="76" rx="8" fill="#e5ebd0" stroke="#a9b680" stroke-width="3"/><path d="M22 28h56" stroke="#a9b680" stroke-width="3" stroke-dasharray="4 4"/><circle cx="38" cy="52" r="6" fill="#8c6e48"/><circle cx="58" cy="50" r="6" fill="#a1825a"/><circle cx="48" cy="68" r="6" fill="#7a9a55"/><circle cx="64" cy="72" r="5" fill="#8c6e48"/><circle cx="36" cy="72" r="5" fill="#a1825a"/></symbol>
+<symbol id="wheel" viewBox="0 0 100 100"><circle cx="50" cy="46" r="34" fill="none" stroke="#c9a56f" stroke-width="6"/><circle cx="50" cy="46" r="6" fill="#b78b62"/><path d="M50 14v64M18 46h64M27 23l46 46M73 23L27 69" stroke="#e0c595" stroke-width="3"/><path d="M28 90h44" stroke="#b78b62" stroke-width="6" stroke-linecap="round"/><path d="M50 52v38" stroke="#b78b62" stroke-width="4"/></symbol>
+<symbol id="cage" viewBox="0 0 100 100"><path d="M12 38q38-28 76 0z" fill="#f3e2bf" stroke="#b78b62" stroke-width="4" stroke-linejoin="round"/><rect x="12" y="38" width="76" height="42" fill="#fff8ec" stroke="#b78b62" stroke-width="4"/><path d="M27 38v42M42 38v42M58 38v42M73 38v42" stroke="#d9b98a" stroke-width="3"/><rect x="8" y="80" width="84" height="10" rx="5" fill="#b78b62"/><rect x="84" y="46" width="8" height="22" rx="3" fill="#8fd0e8" stroke="#6aa9c2" stroke-width="2"/></symbol>
+</svg>
+
+<header><div class="wrap nav">
+<a class="logo" href="#top"><svg viewBox="0 0 100 100"><use href="#ham"/></svg>Rodents Hub Delhi</a>
+<a class="btn wa pill" data-wa="general" href="#">WhatsApp</a>
+</div></header>
+
+<main id="top" class="wrap">
+<section class="hero">
+<div>
+<span class="badge">🐹 Delhi का अपना Hamster Store</span>
+<h1>Rodents Hub Delhi</h1>
+<p>Your Trusted Hamster &amp; Small Pet Supplies Store — प्यारे hamsters और उनकी ज़रूरत का हर सामान, सही दाम पर।</p>
+<div class="cta">
+<a class="btn wa" data-wa="general" href="#">WhatsApp पर बात करें</a>
+<a class="btn ghost" href="#products">Price List देखें</a>
+</div>
+</div>
+<div class="art">
+<svg class="big" viewBox="0 0 100 100"><use href="#ham"/></svg>
+<span class="dot" style="left:12%;top:14%">🌻</span><span class="dot" style="right:12%;top:20%;animation-delay:.8s">🌾</span><span class="dot" style="left:18%;bottom:12%;animation-delay:1.4s">🥜</span>
+</div>
+</section>
+
+<section class="sec" id="products">
+<h2>Price List</h2>
+<p class="sub">किसी भी product पर “Order on WhatsApp” दबाएँ — product का नाम और price अपने-आप message में आ जाएगा।</p>
+<div class="grid" id="grid"></div>
+</section>
+
+<section class="sec">
+<div class="delivery reveal">
+<div>
+<h2>🚚 Home Delivery</h2>
+<p style="margin:6px 0 0;color:var(--muted)">Delhi में home delivery available है, extra charges लागू होंगे। Delivery charge जानने के लिए WhatsApp पर अपना area बताएँ।</p>
+</div>
+<a class="btn wa" data-wa="delivery" href="#">Delivery के बारे में पूछें</a>
+</div>
+</section>
+</main>
+
+<footer>
+<b>Rodents Hub Delhi</b><br>Your Trusted Hamster &amp; Small Pet Supplies Store<br>WhatsApp: <a href="https://wa.me/918447449585" style="color:var(--brown);font-weight:800">+91 8447449585</a>
+</footer>
+
+<a class="btn wa float" data-wa="general" href="#" aria-label="Chat on WhatsApp">💬 Order on WhatsApp</a>
+
+<script>
+var NUM="918447449585";
+function wa(text){return "https://wa.me/"+NUM+"?text="+encodeURIComponent(text);}
+var P=[
+{n:"Syrian Hamster (Single) with Basket",p:900,i:"single",d:"एक प्यारा Syrian hamster, basket के साथ।",t:"Popular"},
+{n:"Syrian Hamster Pair",p:1600,i:"pair",d:"Syrian hamsters की जोड़ी।"},
+{n:"Water Bottle 125 ml",p:170,i:"bottle",d:"बड़े size की leak-resistant bottle।"},
+{n:"Water Bottle 60 ml",p:110,i:"bottle",d:"छोटी bottle, छोटे cage के लिए।",s:1},
+{n:"Bedding 1 kg",p:140,i:"bed",d:"नरम और आरामदायक bedding।"},
+{n:"Seed Mix Packet",p:160,i:"seed",d:"hamster के लिए seeds का mix।"},
+{n:"Pellets Packet",p:160,i:"pell",d:"रोज़ के खाने के लिए pellets।"},
+{n:"Wheel",p:350,i:"wheel",d:"exercise के लिए running wheel।"},
+{n:"Enclosure with 125 ml Bottle",p:500,i:"cage",d:"125 ml water bottle के साथ enclosure।"}
+];
+function icon(k){
+ if(k==="single")return '<svg viewBox="0 0 100 100"><use href="#ham" x="22" y="2" width="56" height="56"/><path d="M16 56h68l-9 32H25z" fill="#d9b27c" stroke="#b78b62" stroke-width="3" stroke-linejoin="round"/><path d="M22 68h56M26 79h48M40 56l-3 32M60 56l3 32" stroke="#b78b62" stroke-width="2.5" fill="none"/></svg>';
+ if(k==="pair")return '<svg viewBox="0 0 100 100"><use href="#ham" x="2" y="22" width="52" height="52"/><use href="#ham" x="46" y="22" width="52" height="52"/></svg>';
+ return '<svg viewBox="0 0 100 100"><use href="#'+k+'"/></svg>';
+}
+var g=document.getElementById("grid");
+P.forEach(function(x,j){
+ var msg="Hello Rodents Hub Delhi! 🐹\nमुझे यह order करना है:\n"+x.n+" – ₹"+x.p+"\nकृपया availability और delivery की जानकारी दें।";
+ var c=document.createElement("article");c.className="card reveal";c.style.transitionDelay=(j%3)*80+"ms";
+ c.innerHTML=(x.t?'<span class="tag">'+x.t+'</span>':'')+'<div class="pic'+(x.s?' sm':'')+'">'+icon(x.i)+'</div><h3></h3><p class="note"></p><div class="row"><span class="price">₹'+x.p+'</span></div><a class="btn wa" target="_blank" rel="noopener">Order on WhatsApp</a>';
+ c.querySelector("h3").textContent=x.n;c.querySelector(".note").textContent=x.d;c.querySelector("a").href=wa(msg);
+ g.appendChild(c);
+});
+document.querySelectorAll("[data-wa]").forEach(function(a){
+ var m=a.dataset.wa==="delivery"?"Hello Rodents Hub Delhi! मुझे home delivery के बारे में जानकारी चाहिए। मेरा area: ":"Hello Rodents Hub Delhi! 🐹 मुझे आपके products के बारे में जानकारी चाहिए।";
+ a.href=wa(m);a.target="_blank";a.rel="noopener";
+});
+var els=document.querySelectorAll(".reveal");
+if("IntersectionObserver" in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.12});
+ els.forEach(function(e){io.observe(e);});
+}else{els.forEach(function(e){e.classList.add("in");});}
+</script>
+</body>
+</html>
